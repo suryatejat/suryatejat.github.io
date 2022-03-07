@@ -58,6 +58,9 @@ body{
 }
 
 /*------------------ RECOMS ----------------*/
+#recoms{
+    padding-top: 10px;
+}
 #recoms a{
     color:steelblue !important;
     margin: 20px 10px 20px 10px;
@@ -65,7 +68,6 @@ body{
     padding: 10px;
 }
 #recomsRow{
-    margin-top: 10px;
     border-bottom: 1px solid gray;
 }
 .recomDD{
@@ -170,14 +172,27 @@ body{
     #promoCol h5{
         font-size: 17px;
     }
+    .img2{
+        padding-top: 80px !important;
+    }
     .img3{
         width: 100%;
+        padding-top: 50px !important;
+        padding-left: 80px;
     }
     .lastCard p{
         padding-right: 120px;
     }
     .lastCard h5{
         padding-right: 130px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -223,6 +238,14 @@ body{
     }
     .lastCard h5{
         padding-right: 130px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -282,6 +305,14 @@ body{
     }
     .lastCard h5{
         padding-right: 130px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -348,6 +379,17 @@ body{
     .lastCard h5{
         padding-right: 130px;
     }
+    .img2{
+        padding-top: 70px !important;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 }
 
 @media only screen and (min-width:1200px){
@@ -391,10 +433,16 @@ body{
     }
     #promoCol img {
         width: 100%;
-        padding-top: 0px;
     }
-    .lastCard img{
-        width: 70% !important;
+    .img1{
+        padding-top: 30px;
+    }
+    .img2{
+        padding-top: 100px !important;
+    }
+    .img3{
+        width: 100% !important;
+        padding-left: 0px !important;
     }
     #promoCol a{
         color:steelblue;
@@ -406,5 +454,13 @@ body{
     }
     .lastCard h5{
         padding-right: 160px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
