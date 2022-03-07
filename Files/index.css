@@ -42,7 +42,7 @@ body{
     border-radius: 10px;
 }
 #servicerow{
-    padding: 10px;
+    padding: 5px !important;
 }
 #services a:hover{
     color: white !important;
