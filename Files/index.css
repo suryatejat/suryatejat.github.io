@@ -1,253 +1,466 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body{
-    background-image: url("../Data/bg.jpg");
+    background-image: url("../Data/background12.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
-.redirector a{
-    display:initial;
-    float: right !important;
-    color: white !important;
-    padding: 2px 8px 2px 8px;
-    background-color: rgba(11, 14, 22, 0.514);
-    font-size: xx-small !important;
+.dropdown-toggle{
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+/*------------------ Account NAVBAR ----------------*/
+
+.nav-link{
+    color: gray !important;
+    padding: 10px;
+}
+.nav-link:hover{
+    color: black !important;
 }
 
-.navbar-nav{
-    margin-right: 0 !important;
-    
+/*------------------ Services NAVBAR ----------------*/
+#services{
+    background-color: rgba(128, 128, 128, 0.589);
 }
-.navbar{
-    color: white !important;
-    background-color: rgba(11, 14, 22, 0.767);
-    border: white;
-    position: relative;
-    margin-top: 50px;
+.dropdown-toggle{
+    color: gray !important;
 }
-.nav-item a, .others a{
-    color: white !important;
-    height: fit-content;
-    width: fit-content;
-    border-radius: 5px !important;
+.servicesDD-item{
     text-align: center;
-    text-transform: uppercase;
 }
-.other-item, .others{
-    padding: 5px;
+#services a{
+    color:black !important;
+    margin: 20px 10px 20px 10px;
+    text-decoration: none;
 }
-.nav-item, .others{
-    padding-left: 10px;
+#services a:first-child{
+    margin-left: 20px;
 }
-#headline{
-    background-color: rgba(0, 0, 0, 0.322);
-    position:static;
+#services a:last-child{
+    margin-right: 0px;
 }
-.title p{
-    color: white;
-    font-size: 36px;
-    padding: 20px 5px;
-    margin: 0;
-    height: fit-content;
-    width: fit-content;
-    letter-spacing: 4px;
-    word-spacing: 4px;
+#services button{
+    border-radius: 10px;
 }
-.navbar-brand{
-    padding-left: 100px;
-    position:absolute;
+#servicerow{
+    padding: 10px;
 }
-  
-#navbar button{
+#services a:hover{
     color: white !important;
 }
-#navbar a{
-    color:rgb(130, 211, 243) !important;
+.servicesDD{
+    padding-top: 10px;
 }
-#navbar a:hover , .others a:hover{
-    color: rgb(11, 14, 22) !important;
-    background-color: white !important;
-    transition: 1s;
-} 
-
-.titleLink{
-    padding-top: 0px !important;
-    padding-bottom: 5px;
+.servicesDD-item a{
+    color: white !important;
+}
+.servicesDD-item a:hover{
+    color:white !important
 }
 
-#service{
-    padding:20px 20px 50px 20px;
-    background-color: rgba(11, 14, 22, 0.767);
-    color: white;
+/*------------------ RECOMS ----------------*/
+#recoms{
+    padding-top: 10px;
 }
-#service a{
-    float: left;
-    color:rgb(130, 211, 243);
+#recoms a{
+    color:steelblue !important;
+    margin: 20px 10px 20px 10px;
+    text-decoration: none;
+    padding: 10px;
 }
-#service a:hover{
-    color: white;
+#recomsRow{
+    border-bottom: 1px solid gray;
 }
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .navbar-brand{
-        padding: 0px;
-        height: 22%;
-        width: 22%;
-        position: relative !important;
-    }
-    .navbar{
-        margin-top: 0px !important;
-    }
-    #service-col{
-        width:100%;
-    }
-    .redirector{
-        display: none;
-    }
-    .others{
-        display: initial;
-    }
+.recomDD{
+    padding-top: 20px;
+}
+.recomDD-item{
+    text-align: center;
+}
+.recomDD-item a{
+    color: white !important;
+}
+.recomDD-item a:hover{
+    color: white !important;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .navbar-brand{
-        padding-left: 0px;
-        height: 15%;
-        width: 15%;
-        position: relative !important;
-    }  
-    .navbar{
-        margin-top: 0px !important;
-    }
-    #service-col{
-        width: 70%;
-    }
-    .redirector{
-        display: none;
-    }
-    .others{
-        display: initial;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .navbar-brand{
-        padding-left: 0px;
-        height: 12%;
-        width: 12%;
-        position: relative !important;
-    }
-    .navbar{
-        margin-top: 0px !important;
-    }
-    #service-col{
-        width: 50%;
-    }
-    .redirector{
-        display: none;
-    }
-    .others{
-        display: initial;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .navbar-brand{
-        padding-left: 0px;
-        height: fit-content;
-        width: 30vh;
-        position: absolute !important;
-    }
-    .navbar1{
-        margin-left: 40vh;
-    }
-    .navbar{
-        margin-top: 50px !important;
-    }
-    body{
-        margin: 5vh 20vh 2vh 20vh;
-    }
-    #service-col{
-        width: 50%;
-    }
-    .redirector{
-        display: initial;
-        margin-right: 18vh;
-    }
-    .others{
-        display: none;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .navbar-brand{
-        padding-left: 0px;
-        height: fit-content;
-        width: 30vh;
-        position: absolute !important;
-    }
-    .navbar1{
-        margin-left: 38vh;
-    }
-    .navbar{
-        margin-top: 50px !important;
-    }
-    .nav-item a{
-        font-size: 18px;
-    }
-    #service-col{
-        width: 33%;
-    }
-    body{
-        margin: 6vh 37vh 2vh 37vh !important;
-    }
-    .datatitle{
-        width: 100% !important;
-        height: 25% !important;
-    }
-    #service{
-        margin: 0;
-        font-size: 16px;
-        padding-bottom: 10vmin 2px !important;
-    }
-    .redirector{
-        display: initial;
-        margin-right: 35vh;
-    }
-    .others{
-        display: none;
-    }
-}
-
-.redirector a:hover{
-    color: rgb(11, 14, 22) !important;
+/*------------------ CONTENT ----------------*/
+#content{
     background-color: white;
-    transition: 1s;
+    margin: 10px 20px 0px 20px;
+}
+#contentList{
+    background-color: rgba(5, 4, 4, 0.753);
+    padding: 40px 20px 10px 30px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    position: relative;
+}
+#contentList h3, h5, p, a{
+    color: rgb(255, 255, 255);
+}  
+#contentList::after{
+    position: absolute;
+    inset: 10px;
+    border:1px solid gray;
+    content: "";
+}
+#contentList h5{
+    padding-bottom: 5px;
+    font-size: 15px;
+    border-bottom: solid gray;
+    border-bottom-width: thin;
 }
 
-.footer{
-    background-color: rgba(11, 14, 22, 0.452);
-    text-align: center;
-    color: white;
-    width: 100%;
-    height: fit-content !important;
-    margin-top: 10px;
-    padding: 5px 5px 1px 5px;
+/*------------------ PROMOTIONS ----------------*/
+#promo{
+    margin: 0px 20px 10px 20px;
+    background-color: white;
+    border: 10px solid rgb(39, 39, 39);
 }
-.footer a{
-    color: white;
-    font-size: 16px !important;
+#promoCol h5{
+    color: black;
+    font-weight:normal !important;
 }
-.footer a:hover{
-    color: rgb(130, 211, 243);
-    transition: 1s;
+#promoCol p{
+    color: gray;
+    font-size: 14px;
+}
+
+
+/*------------------ FOOTER ----------------*/
+#footer a{
+    padding-right: 20px;
+}
+#footer a, #footer p{
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+/*------------------ MEDIA QUERY --------------*/
+
+@media only screen and (max-width:600px){
+    .servicesDD{
+        display: initial;
+    }
+    #services{
+        display: none;
+    }
+    .recomDD{
+        display: initial;
+    }
+    #recoms{
+        display:none;
+    }
+    .recipe{
+        width:100%;
+        padding-bottom: 10px;
+    }
+    #promoCol{
+        width: 100%;
+        display: flex !important;
+        justify-content: flex-end;
+    }
+    #promoCol img {
+        height: 300px;
+        padding-top: 20px;
+    }
+    #promoCol a{
+        color:steelblue;
+        float: right;
+        padding-right: 10px;
+    }
+    #promoCol h5{
+        font-size: 17px;
+    }
+    .img2{
+        padding-top: 80px !important;
+    }
+    .img3{
+        width: 100%;
+        padding-top: 50px !important;
+        padding-left: 80px;
+    }
+    .lastCard p{
+        padding-right: 120px;
+    }
+    .lastCard h5{
+        padding-right: 130px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (min-width:600px){
+    .servicesDD{
+        display: initial;
+    }
+    #services{
+        display: none;
+    }
+    .recomDD{
+        display: initial;
+    }
+    #recoms{
+        display:none;
+    }
+    .recipe{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    #contentList{
+        padding-right: 30px;
+    }
+    #promoCol{
+        width: 100%;
+    }
+    #promoCol img {
+        height: 300px;
+    }
+    .lastCard img{
+        width: 100% !important;
+    }
+    #promoCol a{
+        color:steelblue;
+        float: right;
+        padding-right: 10px;
+    }
+    #promoCol h5{
+        font-size: 17px;
+    }
+    .lastCard p{
+        padding-right: 120px;
+    }
+    .lastCard h5{
+        padding-right: 130px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .servicesDD{
+        display: initial;
+    }
+    #services{
+        display: none;
+    }
+    .recomDD{
+        display: initial;
+    }
+    #recoms{
+        display:none;
+    }
+    #contentList{
+        padding-top: 20px;
+    }
+    #contentList h3{
+        font-size: 25px;
+    }
+    #contentList a{
+        font-size: 10px !important;
+    }
+    .recipe{
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    #promoCol{
+        width: 50%;
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    #promoCol :first-child{
+        display:flex;
+        align-items: flex-start;
+    }
+    #promoCol img {
+        width: 100%;
+        padding-top: 30px;
+    }
+    .lastCard img{
+        width: 70% !important;
+    }
+    #promoCol a{
+        color:steelblue;
+        float: right;
+        padding-right: 10px;
+    }
+    #promoCol h5{
+        font-size: 17px;
+    }
+    .lastCard p{
+        padding-right: 120px;
+    }
+    .lastCard h5{
+        padding-right: 130px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .navbar-nav{
+        margin-left: 30vh;
+    }
+    .servicesDD{
+        display: none;
+    }
+    #services{
+        display:inherit;
+    }
+    .recomDD{
+        display: none;
+    }
+    #recoms{
+        display:inherit;
+    }
+    #contentList{
+        padding-top: 20px;
+    }
+    #contentList h3{
+        font-size: 25px;
+    }
+    #contentList a{
+        font-size: 10px !important;
+    }
+    #contentList h5:first-child{
+        padding-top: 10px; 
+    }
+    .recipe{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    #promoCol{
+        width: 33%;
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    #promoCol :first-child{
+        display:flex;
+        align-items: flex-start;
+    }
+    #promoCol img {
+        width: 100%;
+        padding-top: 30px;
+    }
+    .lastCard img{
+        width: 70% !important;
+    }
+    #promoCol a{
+        color:steelblue;
+        float: right;
+        padding-right: 10px;
+    }
+    #promoCol h5{
+        font-size: 17px;
+    }
+    .lastCard p{
+        padding-right: 120px;
+    }
+    .lastCard h5{
+        padding-right: 130px;
+    }
+    .img2{
+        padding-top: 70px !important;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .navbar-nav{
+        margin-left: 60vh;
+    }
+    .servicesDD{
+        display: none;
+    }
+    .recomDD{
+        display: none;
+    }
+    #services{
+        display: inherit;
+    }
+    #recoms{
+        display: inherit;
+    }
+    #contentList{
+        padding-top: 50px;
+    }
+    #contentList p{
+        padding-top: 20px;
+    }
+    #contentList h5:first-child{
+        padding-top: 10px !important; 
+    }
+    .recipe{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    #promoCol{
+        width: 33%;
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    #promoCol :first-child{
+        display:flex;
+        align-items: flex-start;
+    }
+    #promoCol img {
+        width: 100%;
+    }
+    .img1{
+        padding-top: 30px;
+    }
+    .img2{
+        padding-top: 100px !important;
+    }
+    .img3{
+        width: 100% !important;
+        padding-left: 0px !important;
+    }
+    #promoCol a{
+        color:steelblue;
+        float: right;
+        padding-right: 10px;
+    }
+    .lastCard p{
+        padding-right: 140px;
+    }
+    .lastCard h5{
+        padding-right: 160px;
+    }
+    .card{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .row{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 }
