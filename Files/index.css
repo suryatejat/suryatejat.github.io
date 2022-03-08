@@ -2,6 +2,7 @@ body{
     background-image: url("../Data/background12.png");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 20px;
 }
 .dropdown-toggle{
     text-decoration: none;
@@ -178,13 +179,16 @@ body{
     .img3{
         width: 100%;
         padding-top: 50px !important;
-        padding-left: 80px;
+        padding-left: 5rem !important;
     }
     .lastCard p{
-        padding-right: 120px;
+        padding-right: 11rem;
     }
     .lastCard h5{
         padding-right: 130px;
+    }
+    .lastCard a{
+        padding-right: 11rem !important;
     }
     .card{
         padding: 0 !important;
@@ -222,9 +226,6 @@ body{
     #promoCol img {
         height: 300px;
     }
-    .lastCard img{
-        width: 100% !important;
-    }
     #promoCol a{
         color:steelblue;
         float: right;
@@ -234,10 +235,13 @@ body{
         font-size: 17px;
     }
     .lastCard p{
-        padding-right: 120px;
+        padding-right: 300px;
     }
     .lastCard h5{
         padding-right: 130px;
+    }
+    .img3{
+        width: 100% !important;
     }
     .card{
         padding: 0 !important;
@@ -301,7 +305,7 @@ body{
         font-size: 17px;
     }
     .lastCard p{
-        padding-right: 120px;
+        padding-right: 200px;
     }
     .lastCard h5{
         padding-right: 130px;
@@ -374,7 +378,7 @@ body{
         font-size: 17px;
     }
     .lastCard p{
-        padding-right: 120px;
+        padding-right: 140px;
     }
     .lastCard h5{
         padding-right: 130px;
@@ -422,7 +426,7 @@ body{
         padding-bottom: 10px;
     }
     #promoCol{
-        width: 33%;
+        width: 33.3%;
         display: flex !important;
         justify-content: flex-end;
         align-items: flex-end;
@@ -450,7 +454,7 @@ body{
         padding-right: 10px;
     }
     .lastCard p{
-        padding-right: 140px;
+        padding-right: 160px;
     }
     .lastCard h5{
         padding-right: 160px;
