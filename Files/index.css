@@ -15,7 +15,7 @@ body{
 /*------------------ Account NAVBAR ----------------*/
 .nav-link{
     color: gray !important;
-    padding-right: 20px;
+    padding-right: 15px !important;
 }
 .nav-link:hover{
     color: black !important;
@@ -35,6 +35,7 @@ body{
     color:black !important;
     padding: 0px 10px 0px 10px;
     text-decoration: none;
+    font-size: 12px !important;
 }
 #services a:last-child{
     margin-right: 0px;
@@ -46,8 +47,8 @@ body{
     padding: 5px !important;
 }
 .service-link{
-    padding-right: 16px !important;
-    padding-left: 16px !important;
+    padding-left: 6px !important;
+    padding-right: 8px !important;
     border-right:1px solid white;
 }
 #services a:hover{
@@ -130,6 +131,7 @@ body{
     margin: 0px 20px 10px 20px;
     background-color: white;
     border: 10px solid rgb(39, 39, 39);
+    overflow: hidden;
 }
 #promoCol h5{
     color: black;
@@ -412,7 +414,7 @@ body{
 
 @media only screen and (min-width:1200px){
     .navbar-nav{
-        margin-left: 43vh;
+        margin-left: 7vh;
     }
     .nav-item:not(:last-child()){
         padding: 5px;
@@ -433,9 +435,13 @@ body{
         padding-top: 50px;
     }
     #contentList h3{
-        font-size: 28px !important;
+        font-size: 22px !important;
+    }
+    #contentList h5{
+        font-size: 15px !important;
     }
     #contentList p{
+        font-size: 14px !important;
         padding-top: 15px;
     }
     #contentList h5:first-child{
@@ -465,24 +471,21 @@ body{
         padding-right: 10px;
     }
     .lastCard p{
-        padding-right: 160px;
+        padding-right: 130px;
     }
     .lastCard h5{
-        padding-right: 160px;
+        padding-right: 110px;
+    }
+    .lastCard a{
+        padding-right: 140px !important;
     }
     #navbar, #content, #promo, #footer{
-        width: 84%;
-        margin-left: 8%;
+        width: 70%;
+        margin-left: 15%;
     }
     #servicerow, #recomsRow{
-        width: 84% !important;
-        margin-left: 8% !important;
-    }
-    .search-box{
-        padding-left: 35px;
-    }
-    .bride{
-        padding-left: 9vh;
+        width: 70% !important;
+        margin-left: 15% !important;
     }
     .bride a{
         padding-right: 0 !important;
