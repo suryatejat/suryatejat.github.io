@@ -1,0 +1,382 @@
+body{
+    margin: 30px;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.logo{
+    width: 60px;
+    height: fit-content;
+}
+.logos{
+    align-items: flex-end;
+}
+.logos span{
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+.title{
+    padding-top: 10px;
+    margin-left: 20px;
+    color: rgb(21, 185, 250);
+    font-size: 30px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.title p{
+    font-size: 16px;
+    color: gray;
+}
+.header{
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.headertitle{
+    margin-top: 0 !important;
+    font-size: 28px;
+}
+.navbar{
+    align-items: flex-end;
+}
+
+.profile{
+    font-size: 28px;
+    color: rgb(21, 185, 250);
+    align-items: flex-end;
+}
+.profile img{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    border: none;
+}
+.nav{
+    border-bottom:1px solid rgba(128, 128, 128, 0.294);
+}
+
+
+
+
+.content{
+    margin-top: 20px;
+}
+.leftNav{
+    grid-area: leftNav;
+    font-weight: bold;
+}
+.searchOpt{
+    grid-area: search;
+}
+.data{
+    grid-area: data;
+}
+.content{
+    grid-template-areas: 'leftNav search search search'
+                            'leftNav data data data'
+                            'leftNav data data data';
+}
+
+.leftNav a{
+    text-decoration: none;
+    color:rgb(121, 120, 120);
+    cursor: pointer;
+    font-weight: normal;
+}
+.leftNav a:hover{
+    color: rgb(21, 185, 250);
+    transform: scale(1.02);
+}
+.offices, .job{
+    margin-top: 30px;
+}
+.departments,.offices,.job{
+    flex-direction: column;
+}
+.hiddenJobs{
+    display: none; 
+    flex-direction: column;
+}
+.job button{
+    border:none;
+    background-color: white;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.job button:hover{
+    font-size: 16px;
+}
+.grid a{
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+.searchOpt{
+    margin-left: 70px;
+}
+.searchBar button{
+    background-color: rgb(21, 185, 250);
+    color: white;
+    border: none;
+    padding: 8px;
+    width:32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.searchBar button:hover{
+    color: rgb(21, 185, 250);
+    background-color: white;
+    border:1px solid rgb(21, 185, 250);
+    transition: ease-in-out 0.5s;
+}
+
+.customBar{
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.customOptions{
+    flex-direction: column;
+}
+.topSearch{
+    flex-direction: row;
+}
+.note{
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(105, 104, 104);
+}
+.searchOptions button{
+    margin-left: 30px;
+    padding: 9px 25px 9px 25px;
+    background-color: rgb(50, 223, 50);
+    color: white;
+    border: none;
+}
+.searchOptions button:hover{
+    color: rgb(54, 196, 54);
+    background-color: white;
+    border: 1px solid rgb(54, 196, 54);
+    transition: ease-in-out 0.5s;
+}
+.searchOptions input{
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.filter{
+    margin-left: 50px;
+}
+.filter select{
+    padding: 5px;
+    margin-left: 10px;
+}
+.newEmp button{
+    padding: 8px;
+    background-color: rgb(21, 185, 250);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.newEmp button:hover{
+    color: rgb(21, 185, 250);
+    background-color: white;
+    border:1px solid rgb(21, 185, 250);
+    transition: ease-in-out 0.5s;
+}
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 280px;
+}
+/* .form-container {
+    width: fit-content;
+    background-color: white;
+}
+.form-container input{
+    width: 250px;
+    margin: 10px;
+}
+.form-container label{
+    margin: 10px;
+}
+.form-container button{
+    height: 30px;
+    width: 100%;
+    background-color: rgb(21, 185, 250);
+    color: white;
+    border:none;
+    overflow: hidden;
+    transform: scale(1.1);
+}
+.form-popup {
+    display:none;
+    position: absolute;
+    top: 20%;
+    left:42%;
+    border-radius: 10px;
+    border: 2px solid black;
+    z-index: 9;
+    overflow: hidden;
+} */
+.icon{
+    position: relative;
+    float: left;
+}
+
+.secondPart{
+    border:1px solid rgba(128, 128, 128, 0.808);
+    margin-left: 70px;
+    margin-top: 10px;
+    min-height: 80vh;
+    min-width: 75vw;
+}
+
+.data{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 5px;
+    padding: 5px;
+    width: 228px;
+    min-height: fit-content;
+    background-color: rgba(128, 128, 128, 0.226);
+}
+.card strong{
+    font-size: 16px; 
+    color: rgba(0, 0, 0, 0.856);
+}
+.card:hover{
+    transition: ease-in-out 0.5s;
+    background-color: rgb(21, 185, 250);
+    color: white;
+}
+.card:hover strong{
+    color: white;
+    transition: ease-in-out 0.4s;
+}
+
+.profileImg{
+    margin: 5px 5px 5px 5px;
+}
+.profileImg img{
+    width: 85px;
+    height: 100px;
+}
+.profileData{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#contactImg{
+    padding: 1px;
+    margin-top: 5px;
+}
+.card{
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/*-------------------------------*/
+
+.persDetails, .profDetails, .formButtons, .profileButtons{
+    padding: 30px;
+    flex-direction: column;
+}
+.form-container, #profile-container{
+    display: none;
+    position:absolute;
+    justify-content: space-around;
+    width: 1000px;
+    top: 20%;
+    left:15%;
+    background-color: white;
+    border: 2px solid rgb(21, 185, 250);
+    border-radius: 10px;
+}
+.form-container select{
+    padding: 5px;
+}
+.form-container h1, #profile-container h1{
+    color: rgb(21, 185, 250);
+}
+.form-container input{
+    padding: 5px;
+}
+.profile_input{
+    cursor:text;
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.301);
+    border: 1px solid rgba(128, 128, 128, 0.294);
+    border-radius: 3px;
+}
+.formButtons, .profileButtons{
+    margin-top: 50px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.profileButtons{
+    margin-top: 30px;
+}
+.formButtons button, .profileButtons button{
+    height: 50px;
+    width: fit-content;
+    padding: 10px 20px 10px 20px;
+    align-items: center;
+    border: 1px solid skyblue;
+    background-color: rgb(21, 185, 250);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.formButtons button:hover, .profileButtons button:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    color: rgb(21, 185, 250);
+    background-color: white;
+    cursor: pointer;
+}
+.btn_cancel, .close_profile{
+    border: 1px solid red;
+    background-color: red !important;
+}
+.btn_cancel:hover, .close_profile:hover{
+    color: red !important;
+    background-color: white !important;
+}
+
+
+/*-------------------Error Message-------------*/
+.errorMessage{
+    display: none;
+    background-color: red;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.errorMessage button{
+    background-color: white;
+    color: red;
+}

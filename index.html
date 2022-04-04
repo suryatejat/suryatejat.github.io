@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="Files/index.css"/>
+        <title>Saketa</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body onload="Constructor()">
+        <div class="container nav">
+            <header class="flex header">
+                <div class="flex navbar">
+                    <div class="flex logos">
+                        <img class="logo" src="Data/logo.png">
+                        <span>saketa</span>
+                    </div>
+                    <div class="title">
+                        Employee Directory
+                        <p style="margin: 0;">The Ultimate People Directory Experience</p>
+                    </div>
+                </div>
+                <div class="flex profile">
+                    Welcome,
+                    <span style="color: gray; padding-left: 5px;">Andrew Philips</span>
+                    <img src="Data/profile8.jpg">
+                </div>
+            </header>
+        </div>
+        <div class="container">
+            <main class="content grid" id="content">
+                <div class="leftNav">
+                    <div class="flex departments">
+                        Departments<br>
+                        <a href="" style="margin-top: 10px;" onclick="Filter('department','IT Department')">IT Department</a>
+                        <a href="" onclick="Filter('department','Human Resources')">Human Resources</a>
+                        <a href="" onclick="Filter('department','MD')">MD</a>
+                        <a href="" onclick="Filter('department','Sales')">Sales</a>
+                    </div>
+                    <div class="flex offices">
+                        Offices<br>
+                        <a href="" style="margin-top: 10px;" onclick="Filter('office','Seattle')">Seattle</a>
+                        <a href="" onclick="Filter('office','India')">India</a>
+                    </div>
+                    <div class="flex job">
+                        Job Titles<br>
+                        <a href="" style="margin-top: 10px;" onclick="Filter('job_title','SharePoint Practice Head')">SharePoint Practice Head</a>
+                        <a href="" onclick="Filter('job_title','.Net Development Lead')">.Net Development Lead</a>
+                        <a href="" onclick="Filter('job_title','Recruiting Expert')">Recruiting Expert</a>
+                        <a href="" onclick="Filter('job_title','BI Developer')">BI Developer</a>
+                        <a href="" onclick="Filter('job_title','Business Analyst')">Business Analyst</a>
+                        <button type="submit" style="color: rgb(13, 185, 253);" id="viewMore" onclick="showHiddenJobs()">view more</button>
+                        <div id="hiddenJobs" class="hiddenJobs">
+                            <a href="" onclick="Filter('job_title','Product Manager')">Product Manager</a>
+                            <a href="" onclick="Filter('job_title','Operations Manager')">Operations Manager</a>
+                            <a href="" onclick="Filter('job_title','UI Designer')">UI Designer</a>
+                            <a href="" onclick="Filter('job_title','Network Engineer')">Network Engineer</a>
+                            <a href="" onclick="Filter('job_title','Software Engineer')">Software Engineer</a>
+                            <button type="submit" style="color: rgb(13, 185, 253);" id="viewMore" onclick="HideJobs()">view less</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchOpt">
+                    <div class="searchBar">
+                        <button type="submit" class="fa fa-user"></button>
+                        <button type="submit" onclick="FilterEmployee('A')" value="a" id="A">A</button>
+                        <button type="submit" onclick="FilterEmployee('B')" value="b" id="B">B</button>
+                        <button type="submit" onclick="FilterEmployee('C')" value="c" id="C">C</button>
+                        <button type="submit" onclick="FilterEmployee('D')" value="d" id="D">D</button>
+                        <button type="submit" onclick="FilterEmployee('E')" value="e" id="E">E</button>
+                        <button type="submit" onclick="FilterEmployee('F')" value="f" id="F">F</button>
+                        <button type="submit" onclick="FilterEmployee('G')" value="g" id="G">G</button>
+                        <button type="submit" onclick="FilterEmployee('H')" value="h" id="H">H</button>
+                        <button type="submit" onclick="FilterEmployee('I')" value="i" id="I">I</button>
+                        <button type="submit" onclick="FilterEmployee('J')" value="j" id="J">J</button>
+                        <button type="submit" onclick="FilterEmployee('K')" value="k" id="K">K</button>
+                        <button type="submit" onclick="FilterEmployee('L')" value="l" id="L">L</button>
+                        <button type="submit" onclick="FilterEmployee('M')" value="m" id="M">M</button>
+                        <button type="submit" onclick="FilterEmployee('N')" value="n" id="N">N</button>
+                        <button type="submit" onclick="FilterEmployee('O')" value="o" id="O">O</button>
+                        <button type="submit" onclick="FilterEmployee('P')" value="p" id="P">P</button>
+                        <button type="submit" onclick="FilterEmployee('Q')" value="q" id="Q">Q</button>
+                        <button type="submit" onclick="FilterEmployee('R')" value="r" id="R">R</button>
+                        <button type="submit" onclick="FilterEmployee('S')" value="s" id="S">S</button>
+                        <button type="submit" onclick="FilterEmployee('T')" value="t" id="T">T</button>
+                        <button type="submit" onclick="FilterEmployee('U')" value="u" id="U">U</button>
+                        <button type="submit" onclick="FilterEmployee('V')" value="v" id="V">V</button>
+                        <button type="submit" onclick="FilterEmployee('W')" value="w" id="W">W</button>
+                        <button type="submit" onclick="FilterEmployee('X')" value="x" id="X">X</button>
+                        <button type="submit" onclick="FilterEmployee('Y')" value="y" id="Y">Y</button>
+                        <button type="submit" onclick="FilterEmployee('Z')" value="z" id="Z">Z</button>
+                    </div>
+                    <div class="flex customBar">
+                        <div class="flex customOptions">
+                            <div class="topSearch flex">
+                                <div class="searchOptions">
+                                    Search
+                                    <input type="text" id="searcher" class="fa" placeholder="&#xf002  Enter any keyword" oninput="FilterEmployees()">
+                                    <button type="reset" onclick="ClearSearch()">Clear</button>
+                                </div>
+                                <div class="filter">
+                                    Filter by
+                                    <select name="empName" id="empName" onchange="FilterEmployees()">
+                                        <option>Preferred Name</option>
+                                        <option>First Name</option>
+                                        <option>Last Name</option>
+                                        <option>Email</option>
+                                        <option>Job Title</option>
+                                        <option>Office</option>
+                                        <option>Department</option>
+                                        <option>Phone Number</option>
+                                        <option>Skype Id</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="note">
+                                <strong>Note: </strong> Please use the advanced filter options to refine your results
+                            </div>
+                        </div>
+                        <div class="newEmp">
+                            <button type="submit" onclick="openForm()" id="openEmployee">Add Employee</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondPart">
+                    <div class="data" id="employeeData">
+                        <!-- <div class="card flex" onclick="OpenProfile(1)" style="order: 1;" id="1">
+                            <div class="profileImg">
+                                <img src="Data/profile1.jpg">
+                            </div>
+                            <div class="profileData">
+                                <strong>Anthony Morris</strong><br>
+                                SharePoint Practice Head.<br>
+                                IT Department.<br>
+                                <img src="" class="fa fa-phone-square" id="contactImg">
+                                <img src="" class="fa fa-envelope" id="contactImg">
+                                <img src="" class="fa fa-comment" id="contactImg">
+                                <img src="" class="fa fa-star" id="contactImg">
+                                <img src="" class="fa fa-heart" id="contactImg">
+                            </div>
+                        </div>
+                        <div class="card flex" onclick="OpenProfile(2)" style="order: 2;" id="2">
+                            <div class="profileImg">
+                                <img src="Data/profile2.jpg">
+                            </div>
+                            <div class="profileData">
+                                <strong>Helen Zimmerman</strong><br>
+                                Operations Manager.<br>
+                                IT Department.<br>
+                                <img src="" class="fa fa-phone-square" id="contactImg">
+                                <img src="" class="fa fa-envelope" id="contactImg">
+                                <img src="" class="fa fa-comment" id="contactImg">
+                                <img src="" class="fa fa-star" id="contactImg">
+                                <img src="" class="fa fa-heart" id="contactImg">
+                            </div>
+                        </div>
+                        <div class="card flex" onclick="OpenProfile(3)" style="order: 3;" id="3">
+                            <div class="profileImg">
+                                <img src="Data/profile3.jpg">
+                            </div>
+                            <div class="profileData">
+                                <strong>Jonathon Smith</strong><br>
+                                Product Manager.<br>
+                                IT Department.<br>
+                                <img src="" class="fa fa-phone-square" id="contactImg">
+                                <img src="" class="fa fa-envelope" id="contactImg">
+                                <img src="" class="fa fa-comment" id="contactImg">
+                                <img src="" class="fa fa-star" id="contactImg">
+                                <img src="" class="fa fa-heart" id="contactImg">
+                            </div>
+                        </div>
+                        <div class="card flex" onclick="OpenProfile(4)" style="order: 4;" id="4">
+                            <div class="profileImg">
+                                <img src="Data/profile4.jpg">
+                            </div>
+                            <div class="profileData">
+                                <strong>Richard Scott</strong><br>
+                                .Net Development Lead<br>
+                                IT Department.<br>
+                                <img src="" class="fa fa-phone-square" id="contactImg">
+                                <img src="" class="fa fa-envelope" id="contactImg">
+                                <img src="" class="fa fa-comment" id="contactImg">
+                                <img src="" class="fa fa-star" id="contactImg">
+                                <img src="" class="fa fa-heart" id="contactImg">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </main>
+            <div class="form-popup" id="myForm">
+                <form class="form-container flex" id="form-container" >
+                    <div class="persDetails flex">
+                        <h1>Personal Details</h1><br>
+                        <label for="first_name"><b>First Name *</b></label><br>
+                        <input type="text" placeholder="Enter First Name" name="first_name" id="first_name"><br>
+
+                        <label for="last_name"><b>Last Name *</b></label><br>
+                        <input type="text" placeholder="Enter Last Name" name="last_name" id="last_name"><br>
+                            
+                        <label for="email"><b>Email *</b></label><br>
+                        <input type="text" placeholder="Enter Email" name="email" id="email"><br>
+
+                        <label for="phone_number"><b>Phone Number</b></label><br>
+                        <input type="text" placeholder="Enter Phone Number" name="phone_number" id="phone_number"><br>
+                    </div>
+                    <div class="profDetails flex">
+                        <h1>Professional Details</h1><br>
+                        <label for="job_title"><b>Job Title *</b></label><br>
+                        <select name="job_title" id="job_title" required>
+                            <option>SharePoint Practice Head</option>
+                            <option>.Net Development Lead</option>
+                            <option>Recruiting Expert</option>
+                            <option>BI Developer</option>
+                            <option>Business Analyst</option>
+                            <option>Product Engineer</option>
+                            <option>Operations Manager</option>
+                            <option>UI Designer</option>
+                            <option>Network Engineer</option>
+                            <option>Software Engineer</option>
+                        </select>
+                        <br>
+                    
+                        <label for="office"><b>Office *</b></label><br>
+                        <select name="office" id="office" required>
+                            <option>Seattle</option>
+                            <option>India</option>
+                        </select>
+                        <br>
+
+                        <label for="department"><b>Department *</b></label><br>
+                        <select name="department" id="department" required>
+                            <option>IT Department</option>
+                            <option>Human Resources</option>
+                            <option>MD</option>
+                            <option>Sales</option>
+                        </select>
+                        <br>
+
+                        <label for="skype_id"><b>Skype Id</b></label><br>
+                        <input type="text" placeholder="Enter Skype Id" name="skype_id" id="skype_id"><br>
+
+                        <label for="profilePic"><b>Upload your Profile Picture</b></label><br>
+                        <input type="file" accept="image/*" placeholder="" name="profilePic" id="profilePic" onchange="loadFile(event)" value="Data/profile1.jpg"><br>
+                    </div>
+                    <div class="formButtons flex">
+                        <button type="button" class="btn_add" onclick="Validator()">Add</button><br>
+                        <button type="button" class="btn_cancel" onclick="closeForm()">Close</button><br><br>
+                    </div>
+                </form>
+                <div class="errorMessage" id="errorMessage">
+                    <p id="error"></p>
+                    <button onclick="CloseError()">Close</button>
+                </div>
+            </div>
+            <div class="profile-popup" id="profileForm">
+                <form action="javascript:ModifyEmployee()" class="profile-container flex" id="profile-container">
+                    <div class="persDetails flex">
+                        <h1>Personal Details</h1><br>
+                        <span>
+                            <label><b>First Name : </b></label>
+                            <label contenteditable="true" class="profile_input" id="profile_first_name"></label>
+                        </span>
+                        <br>
+                        <span>
+                            <label for="last_name"><b>Last Name : </b></label>
+                            <label contenteditable="true" class="profile_input" id="profile_last_name"></label>
+                        </span>
+                        <br>
+                        <span>
+                            <label for="email"><b>Email : </b></label>
+                            <label contenteditable="true" class="profile_input" id="profile_email"></label>
+                        </span>
+                        <br>
+                        <span>
+                            <label for="phone_number"><b>Phone Number : </b></label>
+                            <label contenteditable="true" class="profile_input" id="profile_phone_number"></label>
+                        </span>
+                        <br>
+                        <!-- <span>
+                            <img src="" class="profile_pci" id="profile_pic">
+                        </span> -->
+                    </div>
+                    <div class="profDetails flex">
+                        <h1>Professional Details</h1><br>
+                        <span>
+                            <label for="profile_job_title"><b>Job Title : </b></label>
+                            <select class="profile_input" name="profile_job_title" required>
+                                <option>SharePoint Practice Head</option>
+                                <option>.Net Development Lead</option>
+                                <option>Recruiting Expert</option>
+                                <option>BI Developer</option>
+                                <option>Business Analyst</option>
+                                <option>Product Manager</option>
+                                <option>Operations Manager</option>
+                                <option>UI Designer</option>
+                                <option>Network Engineer</option>
+                                <option>Software Engineer</option>
+                            </select>
+                        </span>
+                        <br>
+                        <span>
+                            <label for="profile_office"><b>Office : </b></label>
+                            <select class="profile_input" name="profile_office" required>
+                                <option>Seattle</option>
+                                <option>India</option>
+                            </select>
+                        </span>
+                        <br>
+                        <span>
+                            <label for="profile_department"><b>Department : </b></label>
+                            <select class="profile_input" name="profile_department" required>
+                                <option>IT Department</option>
+                                <option>Human Resources</option>
+                                <option>MD</option>
+                                <option>Sales</option>
+                            </select>
+                        </span>
+                        <br>
+                        <span>
+                            <label for="skype_id"><b>Skype Id : </b></label>
+                            <label contenteditable="true" class="profile_input" id="profile_skype_id"></label>
+                        </span>
+                        <br>
+                    </div>
+                    <div class="profileButtons flex">
+                        <button type="submit" class="modify_profile" onclick="CloseProfile()">Save Changes</button><br>
+                        <button type="button" class="close_profile" onclick="CloseProfile()">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="Files/index.js"></script>
+        
+    </body>
+</html>
