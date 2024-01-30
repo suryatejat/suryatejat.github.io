@@ -1,126 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-        <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="Files/index.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"/>
-
-        <title>HomePage</title>
-    </head>
-    <body>
-        <section>
-            <div class="redirector fixed-top container-fluid">
-                <a href="">Vehicle Export Portal</a>
-                <a href="">Client Login</a> 
-                <a href="">Request a Quote</a> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="./Files/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="generateBoard()">
+    <div class="board">
+        <div class="navBar">
+            <div class="title">
+                <h1>Welcome to Connect 4 Game!</h1>
             </div>
-        </section>
-
-        <section id="navbar">
-            <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
-              <div class="container-fluid">
-                <img class="navbar-brand" src="Data/logo.png">
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse" 
-                    data-target="#navbarSupportedContent" 
-                    aria-controls="navbarSupportedContent" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
-                    <ul class="navbar-nav l-auto">
-                        <li class="nav-item">
-                            <a class="navbar1 nav-link active" aria-current="page" href="index.html">Home</a> 
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About FTZWS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Files/Services.html">Our Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Our Clients</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        <li class="others dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Others
-                            <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                              <li class="other-item"><a class="dropdown-item" href="#">Request a Quote</a></li>
-                              <li class="other-item"><a class="dropdown-item" href="#">Client Login</a></li>
-                              <li class="other-item"><a class="dropdown-item" href="#">Vehicle Export Portal</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-              </div>
-            </nav>
-        </section>
-        <section id="headline">
-            <div class="title container-fluid">
-                <p>BRINGING TECHNOLOGY AND OPERATIONAL EXCELLENCE.</p>
+            <div class="options">
+                <button type="button" id="curUser"></button>
+                <button type="button" aria-label="reset button" onclick="resetBoard()"><i class="fa fa-refresh"></i></button>
             </div>
-        </section>
-        <section id="service">
-            <div class="container-fluid" id="service-container">
-              <div class="row" id="banner-row">
-                <div class="col-md-4" id="service-col">
-                    <img class="datatitle" src="Data/tile1.png">
-                    <br><br>
-                    <p>
-                        Imagine an international gateway where giids and merchandise flow accross borders. Where countries lower taxes, reduce blocks. Where companies import goods and merchandise directly into a Free Trade Zone - and then ship products out duty free.
-                        <br><br>
-                        The Miami Free Trade Zone connects North America, Europe and Asia to Latin America and the Caribbean via direct air and sea transportation linksm plus rail and expressway. operated by FTZ World Services, the 47-acre Zone (#372) saves companies money and time.
-                    </p>
-                    <a class="titleLink" href="#">More about free trade zone ></a>
-        
-                </div>
-                <div class="col-md-4" id="service-col">
-                    <img class="datatitle" src="Data/tile2.png">
-                    <br><br>
-                    <p>
-                        FTZ World Services is your ticket to the world. We're the licensed operator of the Miami Free Trade Zone, the "Gateway to the Americas." We process as much as $1 billion in goods from more than 70 countries each year.
-                        <br><br>
-                        A leader in free trade zone operations, FTZ works magic behind the scenes, offering logistical and operational excellence. FTZ's many services include technology, public on-site U.S. Customs. Other U.S. free trade Xones also benefit from our technology support and operational consulting.
-                    </p>
-                    <a class="titleLink" href="#">Request a Quote ></a>
-        
-                </div>
-                <div class="col-md-4" id="service-col">
-                    <img class="datatitle" src="Data/tile3.png">
-                    <br><br>
-                <p>
-                    FTZ World Service has the unique advantage of being the licensed operator of the Miami Free Trade Zone. We offer state-of-the-art facilities and a stellar track record in xone management, plus technological support, warehousing, and storage. Because FTZ understands U.S. Customs rules, we can use our software and logistical expertise to spped up your paperwork, remove road blocks, and get the products to mmarket cheaper and faster. We save companies accross multiple indistries thousands of dollars per month in fees. We'll give you less to managa and more dollars to keep in your pocket.
-                </p>
-                <a class="titleLink" href="#">More about what we offer ></a>
-                </div>
-              </div>
-            </div>
-        </section>
+        </div>
+        <div class="winnerAlert">
+            <h1 id="winnerAlert"></h1>
+        </div>
+        <div class="game" id="game">
 
-        <section id="footer">
-            <div class="footer container-fluid text-center">
-                <p>
-                    Copyright &copy; 2010 FTZ World Services. All rights reserved. 
-                    
-                    <a href="">Contact us</a> | 
-                    <a href="">Request a Quote</a>
-                </p>
-            </div>
-        </section>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    </body>
+        </div>
+    </div>
+    <script src="./Files/script.js"></script>
+</body>
 </html>
